@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImageSearcher</string>
+    <string name="search_images">Search Images</string>
+    <string name="keywords">Keywords</string>
+    <string name="search">Search</string>
+    <string name="default_text">default</string>
+    <string name="result_image">result</string>
+    <string name="failedToAccessOnlineResources">Failed to access online resources…</string>
+</resources>
