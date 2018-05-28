@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.imagesearcher.MainActivity;
 import com.imagesearcher.R;
 import com.imagesearcher.data.ImageItemsDbContract;
 import com.squareup.picasso.Picasso;
@@ -47,7 +48,7 @@ public class ImageSelectionRVAdapter extends RecyclerView.Adapter<ImageSelection
         String imageTitleFromCursor = mImageEntryCursor.getString(index);
 
         //Update the values in the layout
-        updateImageTitleInGrid(imageTitleFromCursor, holder);
+        updateImageTitleInGrid(imageTitleFromCursor, holder, position);
         updateImageInGrid(imagePathFromCursor, holder);
     }
     @Override public int getItemCount() {
@@ -55,7 +56,6 @@ public class ImageSelectionRVAdapter extends RecyclerView.Adapter<ImageSelection
         else return mImageEntryCursor.getCount();
     }
     public class ImageEntryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
 
         @BindView(R.id.image_description) TextView imageDescription;
         @BindView(R.id.image_in_list) ImageView imageInList;
@@ -75,9 +75,10 @@ public class ImageSelectionRVAdapter extends RecyclerView.Adapter<ImageSelection
     }
 
     //Functional methods
-    private void updateImageTitleInGrid(String imageTitleFromCursor, ImageEntryViewHolder holder) {
+    private void updateImageTitleInGrid(String imageTitleFromCursor, ImageEntryViewHolder holder, int position) {
         TextView textView = holder.imageDescription;
         textView.setText(imageTitleFromCursor);
+
     }
     private void updateImageInGrid(String path, final ImageEntryViewHolder holder) {
         Picasso.with(mContext)

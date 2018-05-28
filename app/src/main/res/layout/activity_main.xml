@@ -7,29 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/search_keywords_TV"
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/search_keywords_ET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        android:hint="@string/keywords"
-        android:textSize="18sp"
-        android:text=""
+        android:layout_marginLeft="@dimen/activity_main_normal_margin"
+        android:layout_marginStart="@dimen/activity_main_normal_margin"
+        android:layout_marginRight="@dimen/activity_main_normal_margin"
+        android:layout_marginEnd="@dimen/activity_main_normal_margin"
         app:layout_constraintBottom_toBottomOf="@+id/search_button"
+        app:layout_constraintRight_toLeftOf="@+id/search_button"
         app:layout_constraintEnd_toStartOf="@+id/search_button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/search_button"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search_button"
+        android:hint="@string/keywords"
+        android:textSize="18sp"
+        android:text=""/>
 
     <Button
         android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/activity_main_normal_margin"
+        android:layout_marginRight="@dimen/activity_main_normal_margin"
+        android:layout_marginTop="@dimen/activity_main_normal_margin"
         android:text="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -47,12 +49,12 @@
             android:id="@+id/image_selecton_RV"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginBottom="@dimen/activity_main_normal_margin"
+            android:layout_marginEnd="@dimen/activity_main_normal_margin"
+            android:layout_marginLeft="@dimen/activity_main_normal_margin"
+            android:layout_marginRight="@dimen/activity_main_normal_margin"
+            android:layout_marginStart="@dimen/activity_main_normal_margin"
+            android:layout_marginTop="@dimen/activity_main_normal_margin"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <ProgressBar
@@ -65,5 +67,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+
 
 </android.support.constraint.ConstraintLayout>

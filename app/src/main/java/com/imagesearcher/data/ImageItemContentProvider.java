@@ -116,6 +116,7 @@ public class ImageItemContentProvider extends ContentProvider {
                 return super.bulkInsert(uri, values);
         }
     }
+
     private int insertValuesIntoTable(Uri uri, SQLiteDatabase db, ContentValues[] values, String table) {
         db.beginTransaction();
         int rowsInserted = 0;
@@ -181,7 +182,7 @@ public class ImageItemContentProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
 
         //Initialize the Uri that will be returned when the element is inserted into the database
-        long hasBeenUpdated = 0;
+        long hasBeenUpdated;
 
         //Insert the element into the database if the Uri matches the relevant table
         long id;

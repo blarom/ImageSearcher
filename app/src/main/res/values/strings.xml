@@ -6,4 +6,7 @@
     <string name="default_text">default</string>
     <string name="result_image">result</string>
     <string name="failedToAccessOnlineResources">Failed to access online resources…</string>
+    <string name="basic_image_search_path"><![CDATA[https://www.googleapis.com/customsearch/v1?key=AIzaSyCzREl07Bc_bk2hm65RtiaJ0hJ48R_nMfg&cx=005800383728131713214:5jocmduwqum&searchType=image&num=10&start=1&q=]]></string>
+    <string name="chosen_image">Chosen Image</string>
+    <string name="failed_find_images">Failed to find images. Search limit possibly reached.</string>
 </resources>
